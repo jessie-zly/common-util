@@ -36,3 +36,11 @@ export function getExactMonth(month, devideChar) {
 export function isEmptyObject(obj) {
   return !!Object.keys(obj).length;
 }
+
+/**
+ * 生成随机颜色 16进制
+ * @returns {string}
+ */
+export function randomColor() {
+  return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6);
+}
