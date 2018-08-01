@@ -27,3 +27,12 @@ export function getExactMonth(month, devideChar) {
     return month.slice(0, 4) + '年' + month.slice(4, 6) + '月';
   }
 }
+
+/**
+ * 判断对象是否为空 ES6的方法
+ * @param {Object} obj 待判断的对象
+ * @returns {boolean}
+ */
+export function isEmptyObject(obj) {
+  return !!Object.keys(obj).length;
+}
