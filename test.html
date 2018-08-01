@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+  function getExactDay(dateTime, devideChar) {
+    if (!dateTime || dateTime.length < 8) return false;
+    if (/\-|\:|\//.test(devideChar)) {
+      return dateTime.slice(0, 4) + devideChar + dateTime.slice(4, 6) + devideChar + dateTime.slice(6, 8);
+    } else {
+      return dateTime.slice(0, 4) + '年' + dateTime.slice(4, 6) + '月' + dateTime.slice(6, 8) + '日';
+    }
+  }
+  var datetime = getExactDay('sadfasf');
+  console.log('datetime', datetime);
+</script>
